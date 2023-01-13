@@ -1,0 +1,54 @@
+// import { Injectable } from '@angular/core';
+// import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+// import { LoginForm } from '../types/Auth';
+
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class AuthService {
+//   isAuthenticated: boolean = false;
+//   isloading: boolean = false;
+
+//   constructor() {}
+
+//   login(form: LoginForm) {
+//     if (this.isloading) return;
+//     this.isloading = true;
+//     const auth = getAuth();
+//     signInWithEmailAndPassword(auth, form.email, form.password)
+//       .then((userCredential) => {
+//         // Signed in
+//         alert('Logged in success');
+//         // ...
+//       })
+//       .catch((error) => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//         alert('Credential does not match the record');
+//       })
+//       .finally(() => (this.isloading = false));
+//   }
+
+//   register() {
+//     if (this.isloading) return;
+
+//     this.isloading = true;
+
+//     if (this.form.password !== this.form.confirm_password) {
+//       this.passwordMatched = false;
+//       alert('Both password does not match');
+//     }
+
+//     const auth = getAuth();
+//     createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
+//       .then((userCredential) => {
+//         alert('Registeration success');
+//       })
+//       .catch((error) => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//         alert('Registeration unsuccessful');
+//       })
+//       .finally(() => (this.isloading = false));
+//   }
+// }

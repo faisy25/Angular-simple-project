@@ -1,0 +1,46 @@
+<h2>Programming books list</h2>
+
+<div *ngIf="isShowing" class="flex flex-row space-x-4">
+  <ng-container *ngFor="let singleBook of books; let i = index">
+    <app-book [book]="singleBook"></app-book>
+  </ng-container>
+</div>
+
+<!-- <p>books works! 55454544</p>
+
+
+<ul>
+  <img src="{{ src }}" width="100px" alt="{{ name }}" />
+  <li>{{ name }}</li>
+  <li>{{ author }}</li>
+</ul>
+
+<ul>
+  <img src="{{ src2 }}" width="100px" alt="{{ name2 }}" />
+  <li>{{ name2 }}</li>
+  <li>{{ author2 }}</li>
+</ul> -->
+
+<!-- <button (click)="toggleBooks()">Show books</button> -->
+
+<!-- <button (click)="isShowing = !isShowing">
+  <ng-container *ngIf="!isShowing">Show Books</ng-container>
+  <ng-container *ngIf="isShowing">Hide Books</ng-container>
+</button> -->
+
+<!-- 
+<div *ngIf="isShowing">
+  <ng-container *ngFor="let book of books; let i = index">
+    <ul>
+      <li>
+        <p class="sno">{{ i + 1 }}</p>
+
+        <img [src]="book.image" width="100px" [alt]="book.name" />
+        <p class="title">
+          {{ book.name | titlecase }} by {{ book.author | titlecase }}
+        </p>
+        <p class="currency">{{ book.amount | currency : "INR" }}</p>
+      </li>
+    </ul>
+  </ng-container>
+</div> -->
